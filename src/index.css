@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-primary: #202223;
+    --text-secondary: #6d7175;
+    --border-color: #e1e3e5;
+    --shopify-blue: #008060;
+    --shopify-blue-hover: #006e52;
+    --shopify-accent-blue: #005bd3;
+    --success: #108043;
+    --warning: #b98900;
+    --danger: #d72c0d;
+    --sidebar-dark: #1a1c1d;
+  }
+
+  .dark {
+    --bg-main: #0f1112;
+    --card-bg: #1c1f21;
+    --text-primary: #f6f6f7;
+    --text-secondary: #a6acb2;
+    --border-color: #2f3438;
+    --shopify-blue: #00a47c;
+    --shopify-blue-hover: #008a68;
+    --shopify-accent-blue: #2c6ecb;
+    --sidebar-dark: #121415;
+  }
+
+  * {
+    touch-action: manipulation;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Receipt Print Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background: white;
+    color: black;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9cccf;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3e444a;
+}

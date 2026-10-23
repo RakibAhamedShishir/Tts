@@ -1,0 +1,6 @@
+{
+  "name": "Shopify POS Pro",
+  "description": "A complete, polished Shopify-inspired offline/online Point of Sale system with inventory management, activity auditing, customer management, reports, and hardware support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
